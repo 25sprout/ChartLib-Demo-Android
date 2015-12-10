@@ -99,14 +99,22 @@ MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、Vie
         android:layout_height="match_parent" />
 ```
 `<com.github.mikephil.charting.charts.LineChart` 的 `LineChart` 也可以更換其他種圖表類型，圖表類型有：
-<br> 1. **摺線圖 LineChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056445988.png)
-<br> 2. **長條圖 BarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056370327.png)
-<br> 3. **長條摺線圖 Combined-Chart**  ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056347376.png)
-<br> 4. **圓餅圖 PieChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056415729.png)
-<br> 5. **雷達圖 ScatterChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056465848.png)
-<br> 6. **K線圖 CandleStickChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056571061.png)
-<br> 7. **泡泡圖 BubbleChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056582819.png)
-<br> 8. **雷達圖 RadarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056847896.png)
+<br> 1. **摺線圖 LineChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056445988.png)
+<br> 2. **長條圖 BarChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056370327.png)
+<br> 3. **長條摺線圖 Combined-Chart**  <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056347376.png)
+<br> 4. **圓餅圖 PieChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056415729.png)
+<br> 5. **雷達圖 ScatterChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056465848.png)
+<br> 6. **K線圖 CandleStickChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056571061.png)
+<br> 7. **泡泡圖 BubbleChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056582819.png)
+<br> 8. **雷達圖 RadarChart** <br>
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056847896.png)
 
 > 接下來本篇以最基本的「摺線圖 LineChart」來做為範例。
 
@@ -123,10 +131,11 @@ Chart 用 `LineData` 作為封裝所有資料的物件，並有 `DataSet`、`Ent
 
  -  `LineData` 中的 `List<DataSet>` 有兩個 DataSet，每個 DataSet 都是一個類別，並由 `List<Entry>` 所組成，簡單來看，資料的組成會如下表：
 <br>
-| DataSet/Entry | Entry0 | Entry1 | Entry2 | Entry3 | Entry4 |
+
+| DataSet/Entry   | Entry0   | Entry1   | Entry2   | Entry3   | Entry4   |
 | :-------------: | :------: | :------: | :------: | :------: | :------: |
-| DataSet A | 0| 2 | 4 | 6 | 8 |
-| DataSet B | 0| 4 | 8 | 12 | 16 |
+| DataSet A       | 0        | 2        | 4        | 6        | 8        |
+| DataSet B       | 0        | 4        | 8        | 12       | 16       |
 
 - 圖右則是實際上程式碼使用的 Method 階層，代表設定資料物件時的架構， `Entry` 是最小單位，負責記錄資料數列的值與順序
 - 圖左下方綠色區塊的 XVals 則代表顯示 X 軸的座標 Label ，是一個 List<String>
@@ -232,6 +241,7 @@ mChart.invalidate();
 dataSet.setColor( getResources().getColor(R.color.pink) );
 ```
 如果你有選色障礙的話，MPAndroid 有提供幾個系列色票， `ColorTemplate` 有以下五個 Static 的 Color Array 可以直接使用：
+<br>
 ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.tempcolor.png)
 
 <br>
