@@ -69,11 +69,11 @@ dependencies {
 ##基本介紹
 
 MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、ViewPort：
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447038568088.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447038568088.png)
 
 本篇文章將會依序介紹這五個類別的用法，我們先來看一個基本圖表會如下圖：
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/chart-intro.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.chart-intro.png)
 
 <span style="color:#FFC107;"> ■ </span>黃色區塊：YAXis，負責 Y 軸的樣式，如：刻度間距、 顯示刻度數量、背景橫線、顯示橫向 LimitLine
 <span style="color:#4CAF50;"> ■ </span>綠色區塊：XAxis，負責 X 軸的樣式，如：刻度間距、顯示刻度數量、背景直線、顯示直向 LimitLine
@@ -82,7 +82,7 @@ MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、Vie
 <span style="color:#FF9500;"> ■ </span>橘色圓形：MakerView，點選資料點會跳出來的泡泡框
 
 其中最重要的就是 LineData，如果圖表沒有 LineData 資料就只單純顯示「`No chart data available`」的文字
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/nodata.PNG)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.nodata.PNG)
 
 所以選擇好圖表類型並把 Chart 放入 Layout 後，第一步是將資料放入 Chart 中。
 
@@ -99,14 +99,14 @@ MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、Vie
         android:layout_height="match_parent" />
 ```
 `<com.github.mikephil.charting.charts.LineChart` 的 `LineChart` 也可以更換其他種圖表類型，圖表類型有：
-1. **摺線圖 LineChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056445988.png)
-2. **長條圖 BarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056370327.png)
-3. **長條摺線圖 Combined-Chart**  ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056347376.png)
-4. **圓餅圖 PieChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056415729.png)
-5. **雷達圖 ScatterChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056465848.png)
-6. **K線圖 CandleStickChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056571061.png)
-7. **泡泡圖 BubbleChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056582819.png)
-8. **雷達圖 RadarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447056847896.png)
+1. **摺線圖 LineChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056445988.png)
+2. **長條圖 BarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056370327.png)
+3. **長條摺線圖 Combined-Chart**  ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056347376.png)
+4. **圓餅圖 PieChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056415729.png)
+5. **雷達圖 ScatterChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056465848.png)
+6. **K線圖 CandleStickChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056571061.png)
+7. **泡泡圖 BubbleChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056582819.png)
+8. **雷達圖 RadarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056847896.png)
 
 > 接下來本篇以最基本的「摺線圖 LineChart」來做為範例。
 
@@ -119,7 +119,7 @@ MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、Vie
 
 Chart 用 `LineData` 作為封裝所有資料的物件，並有 `DataSet`、`Entry`、`XVals` 等不同的元件，以下圖 LineChart 來說明基本概念：
 
- ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/mpandroid-dataset.PNG)
+ ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.mpandroid-dataset.PNG)
 
  -  `LineData` 中的 `List<DataSet>` 有兩個 DataSet，每個 DataSet 都是一個類別，並由 `List<Entry>` 所組成，簡單來看，資料的組成會如下表：
 | DataSet/Entry | Entry0 | Entry1 | Entry2 | Entry3 | Entry4 |
@@ -225,7 +225,7 @@ mChart.invalidate();
 
 設定此資料類別的基礎顏色
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447388407599.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447388407599.png)
 
 ```java
 dataSet.setColor( getResources().getColor(R.color.pink) );
@@ -244,7 +244,7 @@ dataSet.setColor( getResources().getColor(R.color.pink) );
 
 設定每個 Entry 出現點的樣式
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447390965758.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447390965758.png)
 
 `dataSet.setDrawCircles( boolean )` 預設為 True，可以直接設定 Data Point 的樣式
 ```java
@@ -266,11 +266,11 @@ dataSet.setCircleColorHole(Color.WHITE);
 
 設定畫出資料線條的樣式
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447403990447.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447403990447.png)
 ```java
 dataSet.setLineWidth(5f);
 ```
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447643754807.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447643754807.png)
 ```java
 dataSet.setDrawCubic(true); //改成平滑曲線
 dataSet.enableDashedLine(10f, 10f, 0f); //設定虛線（線條長度, 間隔空間, 角度）
@@ -284,7 +284,7 @@ dataSet.enableDashedLine(10f, 10f, 0f); //設定虛線（線條長度, 間隔空
 
 Highlight 是當點下 DataPoint 的時候，會在背景 Grid 線上出現一條用來對齊數值的指引線，預設是水平跟垂直都會顯示
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447411694105.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447411694105.png)
 
 設定線條寬度與顏色
 ```java
@@ -307,7 +307,7 @@ dataSet.setDrawVerticalHighlightIndicator(true);
 
 在摺線圖的一個資料類別中，把資料線下的面積填滿
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447406167644.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447406167644.png)
 
 `dataSet.setDrawFilled( boolean )` 預設是 False，要打開才會有 Fill 作用，而最後加入的 `dataset` ，他的 z-index 為最大，會顯示在最上層
 ```java
@@ -322,7 +322,7 @@ dataSet.setFillAlpha(100); //沒設定的話，alpha 預設為85，範圍是 0-2
 
 重新格式化數值 Label 中的文字
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447412380204.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447412380204.png)
 
 ValueFormat 可以設定給 `dataset`（單一資料類別）或 `Linedata` （所有資料），除了自定義 ValueFormatter 外，作者也提供兩個已定義好的 ValueFormatter，如：
  1. LargeValueFormatter：超過1000會變1k
@@ -406,7 +406,7 @@ YAxis mRightYAxis = mChart.getAxis(YAxis.AxisDependency.RIGHT);
 3. `BOTTOM`（預設）
 4. `BOTTOM_INSIDE`
 5. `BOTH_SIDED`
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447905337638.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447905337638.png)
 
 
 ```java
@@ -418,7 +418,7 @@ mXAxis.setPosition(XAxis.XAxisPosition.TOP);
 > **Label**
 
 設定 Label 顯示方式，以下介紹主要 Label 的設定：
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447905861620.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447905861620.png)
 
 ```java
 mXAxis.setDrawLabels(false); // 顯示 或 隱藏 label
@@ -440,7 +440,7 @@ mXAxis.setTypeface(...)
 
 設定 mXAxis 的線條樣式，有分兩種：
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447906553412.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447906553412.png)
 
 `GridLine` 是負責畫出背景格線中的所有垂直線，可以設定 Color、Width、DashedLine
 ```
@@ -474,7 +474,7 @@ YAxis 因為由 Right 跟 Left 兩條線組成，所以會影響到 Y 軸 Label 
 
 設定 mYAxis 顯示 Label 數值的最大值與最小值
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447904522594.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447904522594.png)
 
 
 需要先把 `mYAxis.setStartAtZero( boolean )` 設為 False，才可以設定上下限
@@ -495,7 +495,7 @@ mRightYAxis.resetAxisMaxValue();
 ```
 
 或是有特殊需求，只顯示最大/小值，可以設定 `setShowOnlyMinMax`，不過這個不受`setStartAtZero`的影響，不需要設為 False
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447651318422.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447651318422.png)
 ```java
 mLeftYAxis.setShowOnlyMinMax(true);
 mRightYAxis.setShowOnlyMinMax(true);
@@ -516,7 +516,7 @@ mRightYAxis.setInverted(true);
 > **Space**
 
 Space 是設定資料之最大值與最小值的向外增加空間
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447907495206.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447907495206.png)
 
 Top 為正值所設定多出來的向上空間
 ```java
@@ -537,7 +537,7 @@ mRightYAxis.setSpaceBottom(100f);
 1. `OUTSIDE_CHART`（預設）
 2. `INSIDE_CHART`
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447907628076.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447907628076.png)
 
 ```java
 mRightYAxis.setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART);
@@ -569,7 +569,7 @@ mRightYAxis.setLabelCount(7, true);
 
 如果有時候資料的第一個跟最後一個 Label 會與 mYAxis 的數值 Label 擋住的話，可以設定數值 Label 的 Offset，調整數值 Label 的距離
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1448016923008.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1448016923008.png)
 
 ```java
 // 設定 X 軸 Offset
@@ -587,7 +587,7 @@ mRightYAxis.setYOffset(10);
 
 設定 mYAxis 的線條樣式，有分兩種：
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447908732149.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447908732149.png)
 
 `GridLine`負責畫出圖表背景格線的所有水平線
 ```java
@@ -626,7 +626,7 @@ mRightYAxis.setDrawAxisLine(false);
 <br>
 <div id="LimitLine"></div>
 # LimitLine
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447661808116.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447661808116.png)
 
 可以在圖表上加上額外的線，表示限制或上限等等，在一開始產生 `LimitLine` 時會帶入 Value 與 String
  `new LimitLine( flaot value , String showString )`
@@ -645,7 +645,7 @@ ll.setLineWidth(7f);
 3. `RIGHT_TOP`
 4. `RIGHT_BOTTOM`
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447909908249.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447909908249.png)
 
 
 
@@ -675,13 +675,13 @@ mLeftYAxis.addLimitLine(ll); //YAxis可以只選一邊設定就好
 # Legend圖例設定
 透過 `chart.getLegend()` 取得 `Legend` 物件，可以設定圖例的大小、形狀、尺寸外，也可以設定圖例區的行距、間距等等
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447911795374.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447911795374.png)
 
 <br>
 <a div="取得Legend圖例區與設定位置"></div>
 > **取得 Legend圖例區與設定位置**
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447917024871.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447917024871.png)
 （圖中的名稱因長度關係有省略一些文字，可以到`Legend.LegendPosition`查看 Static String）
 在上圖中有12個位置可以設定外，還有一個 PieChart 專用的 `PIECHART_CENTER`
 ```java
@@ -695,9 +695,9 @@ lg.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER); // 設定Legend 圖例
 
 圖例的外型有三種可以設定：
 
-1. **CIRCLE** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447917593570.png)
-2. **SQUARE（預設）**![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447917650698.png)
-3. **LINE** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447917665616.png)
+1. **CIRCLE** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447917593570.png)
+2. **SQUARE（預設）**![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447917650698.png)
+3. **LINE** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447917665616.png)
 
 ```java
 lg.setFormSize(10f); //圖例尺寸
@@ -712,7 +712,7 @@ lg.setTextColor(Color.GRAY);
 <br>
 > **圖例邊距**
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447996334832.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447996334832.png)
 
 ```java
 lg.setXEntrySpace(50f); //各圖例組的間距
@@ -750,7 +750,7 @@ lg.setExtra(ColorTemplate.VORDIPLOM_COLORS, new String[]{"Set1", "Set2", "Set3"}
 <div id="MakerView設置"></div>
 ## MakerView設置
 
-![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/1447921821625.png)
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447921821625.png)
 
 `MakerView` 是當點下 DataPoint 的時候，會跳出一個顯示資料的 `View`，原本預設點下 DataPoint 只有顯示 `Highlight` 而已，所以要先設計一個 `MakerView` 的 Layout，再撰寫一個物件繼承 `MakerView` 並覆寫原有的設計
 ```java
