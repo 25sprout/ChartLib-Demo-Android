@@ -15,7 +15,7 @@ public class MyValueFormatter implements ValueFormatter {
     private DecimalFormat mFormat;
 
     public MyValueFormatter() {
-        mFormat = new DecimalFormat("$###,###,##0.0"); // use one
+        mFormat = new DecimalFormat("$ ###,###,##0"); // use one
         /* NumberFormat 是以每三位數加上逗號的格式化
          * DecimalFormat 是可以自定義顯示的數字格式
          * # : digit不顯示零
@@ -30,6 +30,6 @@ public class MyValueFormatter implements ValueFormatter {
         /* ValueFormatter 一定要實作此方法
         * 會把 value 跟 entry 都傳回來，可以自己作一些邏輯上的處理
         * 主要回傳的是顯示 format 後的數值字串 */
-        return mFormat.format(value) ;//+ " $";
+        return mFormat.format(value);
     }
 }

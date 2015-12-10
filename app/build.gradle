@@ -23,9 +23,11 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.1.0'
-    compile project(':MPChartLib')
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.5'
+//    下面純粹拿來看 source code 用，但是這個在 barchart 上顯示會有點小bug
+//    compile project(':MPChartLib')
 }
+

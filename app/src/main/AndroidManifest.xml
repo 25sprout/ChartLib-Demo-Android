@@ -26,6 +26,9 @@
         <activity android:name=".LineChartDemoActivity"
                   android:label="@string/app_name">
         </activity>
+        <activity android:name=".BarChartDemoActivity"
+                  android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>
