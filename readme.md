@@ -75,11 +75,11 @@ MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、Vie
 
 ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.chart-intro.png)
 
-<span style="color:#FFC107;"> ■ </span>黃色區塊：YAXis，負責 Y 軸的樣式，如：刻度間距、 顯示刻度數量、背景橫線、顯示橫向 LimitLine
-<span style="color:#4CAF50;"> ■ </span>綠色區塊：XAxis，負責 X 軸的樣式，如：刻度間距、顯示刻度數量、背景直線、顯示直向 LimitLine
-<span style="color:#673AB7;"> ■ </span>紫色區塊：Legend，負責圖例的樣式，如：圖例形狀、行距、間距、自定義顏色
-<span style="color:#212121;"> ■ </span>黑色箭頭：LineData，圖表資料與一些樣式設定，如：資料集合、線條樣式、資料點樣式
-<span style="color:#FF9500;"> ■ </span>橘色圓形：MakerView，點選資料點會跳出來的泡泡框
+<br><span style="color:#FFC107;"> ■ </span>黃色區塊：YAXis，負責 Y 軸的樣式，如：刻度間距、 顯示刻度數量、背景橫線、顯示橫向 LimitLine
+<br><span style="color:#4CAF50;"> ■ </span>綠色區塊：XAxis，負責 X 軸的樣式，如：刻度間距、顯示刻度數量、背景直線、顯示直向 LimitLine
+<br><span style="color:#673AB7;"> ■ </span>紫色區塊：Legend，負責圖例的樣式，如：圖例形狀、行距、間距、自定義顏色
+<br><span style="color:#212121;"> ■ </span>黑色箭頭：LineData，圖表資料與一些樣式設定，如：資料集合、線條樣式、資料點樣式
+<br><span style="color:#FF9500;"> ■ </span>橘色圓形：MakerView，點選資料點會跳出來的泡泡框
 
 其中最重要的就是 LineData，如果圖表沒有 LineData 資料就只單純顯示「`No chart data available`」的文字
 ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.nodata.PNG)
@@ -99,14 +99,14 @@ MPAndroid 架構如下，主要分為 LineData、Axis、Legend、MakerView、Vie
         android:layout_height="match_parent" />
 ```
 `<com.github.mikephil.charting.charts.LineChart` 的 `LineChart` 也可以更換其他種圖表類型，圖表類型有：
-1. **摺線圖 LineChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056445988.png)
-2. **長條圖 BarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056370327.png)
-3. **長條摺線圖 Combined-Chart**  ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056347376.png)
-4. **圓餅圖 PieChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056415729.png)
-5. **雷達圖 ScatterChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056465848.png)
-6. **K線圖 CandleStickChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056571061.png)
-7. **泡泡圖 BubbleChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056582819.png)
-8. **雷達圖 RadarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056847896.png)
+<br> 1. **摺線圖 LineChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056445988.png)
+<br> 2. **長條圖 BarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056370327.png)
+<br> 3. **長條摺線圖 Combined-Chart**  ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056347376.png)
+<br> 4. **圓餅圖 PieChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056415729.png)
+<br> 5. **雷達圖 ScatterChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056465848.png)
+<br> 6. **K線圖 CandleStickChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056571061.png)
+<br> 7. **泡泡圖 BubbleChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056582819.png)
+<br> 8. **雷達圖 RadarChart** ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.1447056847896.png)
 
 > 接下來本篇以最基本的「摺線圖 LineChart」來做為範例。
 
@@ -122,6 +122,7 @@ Chart 用 `LineData` 作為封裝所有資料的物件，並有 `DataSet`、`Ent
  ![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.mpandroid-dataset.PNG)
 
  -  `LineData` 中的 `List<DataSet>` 有兩個 DataSet，每個 DataSet 都是一個類別，並由 `List<Entry>` 所組成，簡單來看，資料的組成會如下表：
+<br>
 | DataSet/Entry | Entry0 | Entry1 | Entry2 | Entry3 | Entry4 |
 | :-------------: | :------: | :------: | :------: | :------: | :------: |
 | DataSet A | 0| 2 | 4 | 6 | 8 |
@@ -231,12 +232,7 @@ mChart.invalidate();
 dataSet.setColor( getResources().getColor(R.color.pink) );
 ```
 如果你有選色障礙的話，MPAndroid 有提供幾個系列色票， `ColorTemplate` 有以下五個 Static 的 Color Array 可以直接使用：
-1. LIBERTY_COLORS：<span style="color:#CFF8F6;"> ▉ </span> , <span style="color:#94D4D4;"> ▉ </span> , <span style="color:#88B4BB;"> ▉ </span> , <span style="color:#76AEAF;"> ▉ </span> , <span style="color:#2A6D82;"> ▉ </span>
-2. JOYFUL_COLORS：<span style="color:#D9508A;"> ▉ </span> , <span style="color:#FE9507;"> ▉ </span> , <span style="color:#FEF778;"> ▉ </span> , <span style="color:#6AA786;"> ▉ </span> , <span style="color:#35C2D1;"> ▉ </span>
-3. PASTEL_COLORS：<span style="color:#405980;"> ▉ </span> , <span style="color:#95A57C;"> ▉ </span> , <span style="color:#D9B8A2;"> ▉ </span> , <span style="color:#BF8686;"> ▉ </span> , <span style="color:#B33050;"> ▉ </span>
-4. COLORFUL_COLORS：<span style="color:#C12552;"> ▉ </span> , <span style="color:#FF6600;"> ▉ </span> , <span style="color:#F5C700;"> ▉ </span> , <span style="color:#6A961F;"> ▉ </span> , <span style="color:#B36435;"> ▉ </span>
-5. VORDIPLOM_COLORS：<span style="color:#c0ff8c;"> ▉ </span> , <span style="color:#fff78c;"> ▉ </span> , <span style="color:#ffd08c;"> ▉ </span> , <span style="color:#8ceaff;"> ▉ </span> , <span style="color:#ff8c9d;"> ▉ </span>
-
+![Alt text](https://github.com/25sprout/ChartLib-Demo-Android/blob/master/images/.tempcolor.png)
 
 <br>
 <div id="DataPoint"></div>

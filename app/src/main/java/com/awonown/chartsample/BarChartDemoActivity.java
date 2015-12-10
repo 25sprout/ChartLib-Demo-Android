@@ -67,7 +67,6 @@ public class BarChartDemoActivity extends AppCompatActivity {
 
     private void setupLegend(){
         Legend lg = mChart.getLegend();
-        lg.setXEntrySpace(20f);
     }
 
     /* 將 DataSet 資料整理好後，回傳 LineData */

@@ -52,12 +52,22 @@ public class LineChartDemoActivity extends AppCompatActivity {
     private void setupXAxis() {
         XAxis mXAxis = mChart.getXAxis();
         mXAxis.setPosition(XAxis.XAxisPosition.BOTH_SIDED);
-
+        mXAxis.setGridColor(ColorTemplate.PASTEL_COLORS[0]);
+        mXAxis.setAxisLineColor(ColorTemplate.PASTEL_COLORS[0]);
     }
 
     private void setupYAxis() {
         YAxis mLeftYAxis = mChart.getAxis(YAxis.AxisDependency.LEFT);
         YAxis mRightYAxis = mChart.getAxis(YAxis.AxisDependency.RIGHT);
+
+        mLeftYAxis.setGridColor(ColorTemplate.PASTEL_COLORS[0]);
+        mRightYAxis.setGridColor(ColorTemplate.PASTEL_COLORS[0]);
+        mLeftYAxis.setAxisLineColor(ColorTemplate.PASTEL_COLORS[0]);
+        mRightYAxis.setAxisLineColor(ColorTemplate.PASTEL_COLORS[0]);
+
+        mLeftYAxis.setTextColor(ColorTemplate.PASTEL_COLORS[0]);
+        mRightYAxis.setTextColor(ColorTemplate.PASTEL_COLORS[0]);
+
     }
 
     private void setupViewPort(){
